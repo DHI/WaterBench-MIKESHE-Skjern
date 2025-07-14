@@ -1,5 +1,9 @@
 # Folders
 .github/
+.input_old/
+.model_old/
+Skjern_Models/
+MapsDK/
 
 # PyCharm
 .idea/
