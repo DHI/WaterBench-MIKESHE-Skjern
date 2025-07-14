@@ -1,20 +1,52 @@
-# my_library: Template Python repository
+# Integrated Hydrological Model of Skjern Catchment
+This README provides practical and background information on the dataset. The dataset can be cited as:
 
-This repository serves as a template for creating a Python library
+== Include citation after publishing ==
 
-## How do I use this?
+See the [license](license.txt) for details on data usage.
 
-1. Create a new repository in GitHub with this repo as a starting point
-    ![](images/new_repo.png)
-
-2. Change all occurences of `my_library` to match the name of your new library
-
-3. Consider if the [license](LICENSE) should be modified.
+> ⚠️ **Important Disclaimer**    
+> This model is **not calibrated** for operational use. It is intended for **educational and research purposes only**, and the results **must not** be used for decision-making. The performance shown here does **not** reflect that of DHI’s high-resolution models.
 
 
-## Additional resources
+## Intended use
 
-If you're interested in learning more about best practices for developing Python packages, check out the following resources:
+This dataset is designed to support educational, research, and exploratory activities, including:
 
-- [Python Package Development at DHI](https://dhi.github.io/python-package-development/)
-- [Scientific Python Library Development Guide](https://learn.scientific-python.org/development/)
+* Experimenting with integrated hydrological modeling with MIKE SHE.
+* Validating model outputs with insitu and remote sensing observational data.
+* Testing and comparing model parameter calibration methods.
+* Exploring how model outputs change with plenty vs. limited calibration data.
+* Building data-driven models, including machine learning surrogates of MIKE simulation results.
+
+
+## Folder structure
+
+The repository is organized in the following way
+
+- README.md
+- license
+- model
+- input
+- observations
+- code
+- figures
+- output_sample
+
+Separately from the current repository, you can find the output zip file (in Zenodo):
+
+- output
+    + MIKE model result data
+
+
+## Introduction
+
+## MIKE SHE Integrated Hydrological Model
+
+## Model validation
+
+The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at DHI can be used to validate model outputs by comparing them to observational data.
+
+## Data sources
+
+### Altimetry data
