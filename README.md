@@ -41,7 +41,7 @@ Separately from the current repository, you can find the output zip file (in Zen
 
 ## Introduction
 
-## The MIKE 21 Flow Model FM
+## MIKE SHE Integrated Hydrological Model
 
 ## Model validation
 
