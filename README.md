@@ -46,7 +46,7 @@ Separately from the current repository, you can find the output and input zip fi
 - output
     + MIKE model result data
 
-***To run notebooks in this repository, the MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory.***
+:exclamation: ***To run notebooks in this repository, the MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory.***
 
 ## Introduction
 
