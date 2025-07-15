@@ -179,8 +179,11 @@ dependencies:
   - zstandard=0.23.0=py313ha7868ed_2
   - zstd=1.5.7=hbeecb71_2
   - pip:
+      - clr-loader==0.2.7.post0
       - mikecore==0.2.2
       - mikeio==2.6.0
+      - mikeio1d==1.1.1
+      - pythonnet==3.0.5
       - pyyaml==6.0.2
       - tqdm==4.67.1
       - xarray==2025.7.1
