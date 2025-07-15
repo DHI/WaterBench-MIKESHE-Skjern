@@ -2,7 +2,7 @@
 .github/
 .input_old/
 .model_old/
-Skjern_Models/
+Skjern_Models/*
 MapsDK/
 MapsDK.zip
 
