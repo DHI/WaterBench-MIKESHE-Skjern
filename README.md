@@ -32,13 +32,18 @@ The repository is organized in the following way
     + Satellite altimetry
 - code
     + tutorial notebooks
+- MapsDK
+    + Sample input data
+- Skjern_Models/Setup
+    + MIKE SHE model (.she)
+    + MIKE Hydro model (.myhdro)
 - figures
 - output_sample
 
-Separately from the current repository, you can find the output and input zip files (in Zenodo):
+Separately from the current repository, you can find the output and input zip files (in Zenodo) :construction:
 
 - input (MapsDK.zip)
-    + Contains folders for model inputs (MapsDK) and Setup (Skjern_Models)
+    + Contains complete folders for model inputs (MapsDK) and Setup (Skjern_Models)
     + Input dfs2 and dfs0 data files for model setup and forcings
     + MIKE SHE model file (.she)
     + MIKE Hydro model file (.mhydro)
@@ -46,7 +51,7 @@ Separately from the current repository, you can find the output and input zip fi
 - output
     + MIKE model result data
 
-:exclamation: ***To run notebooks in this repository, the MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory.***
+:exclamation: :exclamation: ***As it appears here, only select input files needed to run the example notebooks are included in the repository. To run MIKE SHE simulations, the MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation, but are not included here due to file size.***
 
 ## Introduction
 
