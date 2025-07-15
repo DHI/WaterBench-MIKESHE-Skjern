@@ -60,7 +60,7 @@ The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at 
 
 ### Altimetry data
 
-### Dependencies
+## Dependencies
 
 To run the tutorials and fully explore this waterbench case, the following packages are required:
 
