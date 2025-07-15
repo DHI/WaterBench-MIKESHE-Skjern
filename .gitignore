@@ -12,6 +12,19 @@ MapsDK.zip
 !Skjern_Models/**/*.xns11
 #!Skjern_Models/**/*.log
 
+# Specific files for explore_input_data.ipynb
+!MapsDK/DK_DMI_Corr_Precip_10km_1989-2022.dfs2
+!MapsDK/dkmj0219/dkmj_topo_0.dfs2
+!MapsDK/DKDomains2013/ID15_oplande_Skjern.shp
+!MapsDK/DK_DMI_Corr_Precip_10km_1989-2022.dfs2
+!MapsDK/DK_Ta_20km_1989-2022.dfs2
+!MapsDK/DK_ETref_0.95vest_for_storebaelt_20km_1989-2022.dfs2
+!MapsDK/DK_Landuse_9kl_5cropsCorr_100m_MB500.dfs2
+!MapsDK/crop_map_irrigation_5class_500m.dfs2
+!Skjern_Models/Setup/Deficit_factor_5veg_inv.dfs0
+!Skjern_Models/Setup/DK_2018_Veg_Prop_inv_100m.etv
+!Skjern_Models/Setup/500m_Skjern.xns11
+
 # PyCharm
 .idea/
 
