@@ -43,10 +43,7 @@ The repository is organized in the following way
 Separately from the current repository, you can find the output and input zip files (in Zenodo) :construction:
 
 - input (MapsDK.zip)
-    + Contains complete folders for model inputs (MapsDK) and Setup (Skjern_Models)
-    + Input dfs2 and dfs0 data files for model setup and forcings
-    + MIKE SHE model file (.she)
-    + MIKE Hydro model file (.mhydro)
+    + Contains complete folders for model inputs (MapsDK) and setup (Skjern_Models)
 
 - output
     + MIKE model result data
