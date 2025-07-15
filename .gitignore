@@ -7,10 +7,10 @@ MapsDK/
 MapsDK.zip
 
 # But do not ignore these specific file types
-!Skjern_Models/*.she
-!Skjern_Models/*.mhydro
-!Skjern_Models/*.xns11
-!Skjern_Models/*.log
+!Skjern_Models/**/*.she
+!Skjern_Models/**/*.mhydro
+!Skjern_Models/**/*.xns11
+!Skjern_Models/**/*.log
 
 # PyCharm
 .idea/
