@@ -1,4 +1,4 @@
-// Created     : 2025-07-14 15:52:44
+// Created     : 2025-07-22 15:47:8
 // DLL         : C:\Program Files (x86)\DHI\MIKE Zero\2025\bin\x64\pfs2004.dll
 // Version     : 23.0.3.18318
 
@@ -27984,7 +27984,16 @@
       [WBL]
          Touched = 1
          IsDataUsedInSetup = 1
-         MzSEPfsListItemCount = 0
+         MzSEPfsListItemCount = 1
+         [WBL_File_1]
+            Touched = 1
+            IsDataUsedInSetup = 1
+            MzSEPfsListItemCount = 1
+            Enable = 1
+            File = |.\HIP_500m_Skjern_DHI.she - Result Files\WaterBalancePar1.wbl|
+            Name = ''
+         EndSect  // WBL_File_1
+
       EndSect  // WBL
 
    EndSect  // Results_Post_Processing
