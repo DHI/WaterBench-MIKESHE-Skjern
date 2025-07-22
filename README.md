@@ -48,7 +48,7 @@ Separately from the current repository, you can find the output and input zip fi
 - output
     + MIKE model result data
 
-:exclamation: :exclamation: ***As it appears here, only select input files needed to run the example notebooks are included in the repository. To run MIKE SHE simulations, the MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation, but are not included here due to file size.***
+:exclamation: :exclamation: ***As it appears here, only select files needed to run the input data example notebooks are included in the repository. To run MIKE SHE simulations and run the results viewing notebooks, the MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation, but are not included here due to file size.***
 
 ## Introduction
 
