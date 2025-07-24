@@ -13,6 +13,7 @@ MapsDK.zip
 !Skjern_Models/**/*.she
 !Skjern_Models/**/*.mhydro
 !Skjern_Models/**/*.xns11
+!MapsDK/Hdata/Hdata_filtered/*.dfs0
 #!Skjern_Models/**/*.log
 
 # Specific files for explore_input_data.ipynb
@@ -27,6 +28,10 @@ MapsDK.zip
 !Skjern_Models/Setup/Deficit_factor_5veg_inv.dfs0
 !Skjern_Models/Setup/DK_2018_Veg_Prop_inv_100m.etv
 !Skjern_Models/Setup/500m_Skjern.xns11
+
+# For model_validation.ipynb
+!MapsDK/Qdata/Q_filtered.dfs0
+!MapsDK/WMdata/head_evel_SZ.csv
 
 # PyCharm
 .idea/
