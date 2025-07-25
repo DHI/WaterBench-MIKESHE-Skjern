@@ -33,21 +33,21 @@ The repository is organized in the following way
 - code
     + tutorial notebooks
 - MapsDK
-    + *Sample input data (*.dfs2, *.dfs0)
+    + \* Sample input data (*.dfs2, *.dfs0)
     + Domain shapefiles (/DKDomains2013)
-    + *Geological layer data (/dkmj2019)
+    + \* Geological layer data (/dkmj2019)
     + River discharge observations (/Qdata)
     + Well water table depth observations (/Hdata)
     + MIKE Hydro river cross sections (/Mhydro/*.xns11)
 - Skjern_Models/Setup
     + MIKE SHE model (.she)
     + MIKE Hydro model (.myhdro)
-    + *Model setup data (*.dfs2)
-    + *Results folder (/HIP_500m_Skjern_DHI.she - Result Files/)
+    + \* Model setup data (*.dfs2)
+    + \* Results folder (/HIP_500m_Skjern_DHI.she - Result Files/)
 - figures
 - waterbalance_output
 
-> * Folders and/or files in this location are not all included in the current github repository due to large files sizes. Some sample files are included to run notebooks, but not everything for running a full MIKE SHE model is here. To be able to run the Skjern MIKE SHE model and calibration scripts, the following zip file should be downloaded from Zenodo: :construction:
+> \* Folders and/or files in this location are not all included in the current github repository due to large files sizes. Some sample files are included to run notebooks, but not everything for running a full MIKE SHE model is here. To be able to run the Skjern MIKE SHE model and calibration scripts, the following zip file should be downloaded from Zenodo: :construction:
 
 - MapsDK.zip
     + Contains complete folders for model inputs (MapsDK) and setup (Skjern_Models)
