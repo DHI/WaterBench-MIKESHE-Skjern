@@ -31,7 +31,7 @@ MapsDK.zip
 
 # For model_validation.ipynb
 !MapsDK/Qdata/Q_filtered.dfs0
-!MapsDK/WMdata/head_evel_SZ.csv
+!MapsDK/Hdata/head_evel_SZ.csv
 
 # PyCharm
 .idea/
