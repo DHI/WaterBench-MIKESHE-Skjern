@@ -23,7 +23,7 @@ This dataset is designed to support educational, research, and exploratory activ
 
 ## Folder structure
 
-The repository is organized in the following way
+**The repository is organized in the following way:**
 
 - README.md
 - license
@@ -49,6 +49,7 @@ The repository is organized in the following way
 
 > \* Folders and/or files in this location are not all included in the current github repository due to large files sizes. Some sample files are included to run notebooks, but not everything for running a full MIKE SHE model is here. To be able to run the Skjern MIKE SHE model and calibration scripts, the following zip file should be downloaded from Zenodo: :construction:
 
+**In Zenodo:**
 - MapsDK.zip
     + Contains complete folders for model inputs (MapsDK) and setup (Skjern_Models)
 
