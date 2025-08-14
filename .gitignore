@@ -1,8 +1,6 @@
 # Files
 update_requirements.sh
-code/calibration_methods.ipynb
-code/explore_observation_data.ipynb
-code/download_S2.ipynb
+code/.extra_books/
 
 # Folders
 .github/
