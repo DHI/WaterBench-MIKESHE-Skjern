@@ -55,6 +55,12 @@ This dataset is designed to support educational, research, and exploratory activ
 
 :exclamation: :exclamation: ***The MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation and full use of the model.***
 
+## Introduction
+This repository contains an example model setup of a MIKE SHE Integrated Hydrological Model for the Skjern River catchment located on the west coast of Jutland, Denmark. MIKE SHE models the flow of water through the major pathways in the terrestrial water cycle, with modules for overland flow, unsaturated zone, saturated zone, and land use. The model also utilizes the network of rivers, lakes and sewers as defined by a [MIKE Hydro Basin](https://www.dhigroup.com/technologies/mikepoweredbydhi/mike-hydro-basin) model setup. These models can be used for tasks such as catchment or subcatchment scale water resource assessment, analyses of surface and groundwater interactions, predicting flooding events, or simulating the effect of changes to land cover or climate on terrestrial water processes.
+
+
+The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990 to 12/23/2019. In addition to the MIKE SHE model file, also included are the setup files, input parameters files and meteorological forcings, example model output, and several jupyter notebooks to help the user navigate the different files and how to work with the model.
+
 ## MIKE SHE Integrated Hydrological Model
 
 ## Model validation
@@ -64,6 +70,13 @@ The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at 
 ## Data sources
 
 ### River Gauge
+
+![Alt text](figures/station_location.png)
+
+![Alt text](figures/TS_val_Q250019.png)
+
+![Alt text](figures/mod_vs_obs_Q250019.png)
+
 
 ### Water table depth
 
