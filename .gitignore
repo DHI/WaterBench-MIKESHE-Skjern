@@ -1,6 +1,6 @@
 # Files
 update_requirements.sh
-code/.extra_books/
+mkdocs.yml
 
 # Folders
 .github/
@@ -9,6 +9,7 @@ code/.extra_books/
 Skjern_Models/**
 MapsDK/
 MapsDK.zip
+code/.extra_books/
 
 # But do not ignore these specific file types
 !Skjern_Models/**/*.she
