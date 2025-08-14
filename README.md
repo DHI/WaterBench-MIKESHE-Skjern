@@ -27,45 +27,45 @@ This dataset is designed to support educational, research, and exploratory activ
 
 - README.md
 - license
-- earth_observation
-    + Satellite altimetry
-    + Sentinel-2 water masks
 - code
     + tutorial notebooks
 - MapsDK
     + \* Sample input data (*.dfs2, *.dfs0)
-    + Domain shapefiles (/DKDomains2013)
-    + \* Geological layer data (/dkmj2019)
-    + River discharge observations (/Qdata)
-    + Well water table depth observations (/Hdata)
+    + Domain shapefiles (/DKDomains2013/*)
+    + \* Geological layer data (/dkmj2019/*)
+    + River discharge observations (/Qdata/*)
+    + Well water table depth observations (/Hdata/*)
     + MIKE Hydro river cross sections (/Mhydro/*.xns11)
 - Skjern_Models/Setup
     + MIKE SHE model (.she)
     + MIKE Hydro model (.myhdro)
     + \* Model setup data (*.dfs2)
     + \* Results folder (/HIP_500m_Skjern_DHI.she - Result Files/)
-- figures
 - waterbalance_output
+    + Output data files from water balance post processing (*.dfs0, *.txt)
+    + Output figure from water balance post processing (.emf)
+- MS
+    + Example surface water masks of the Skjern catchment derived from Sentinel-2 multispectral imagery (*.tiff)
 
-> \* Folders and/or files in this location are not all included in the current github repository due to large files sizes. Some sample files are included to run notebooks, but not everything for running a full MIKE SHE model is here. To be able to run the Skjern MIKE SHE model and calibration scripts, the following zip file should be downloaded from Zenodo: :construction:
+> \* This repo does not contain all files needed for running the Skjern MIKE SHE model due to large file size. The example data and notebooks here are meant to be used to help the user navigate input files, output files, how to adjust model parameters and validation of the model. To run the model, the complete folder of setup in input files should be downloaded from Zenodo :construction:
 
 **In Zenodo:**
 - MapsDK.zip
     + Contains complete folders for model inputs (MapsDK) and setup (Skjern_Models)
 
-:exclamation: :exclamation: ***The MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation and full use of this repository.***
-
-## Introduction
+:exclamation: :exclamation: ***The MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation and full use of the model.***
 
 ## MIKE SHE Integrated Hydrological Model
 
 ## Model validation
 
-The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at DHI can be used to validate model outputs by comparing them to observational data.
+The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at DHI can be used to validate model outputs by comparing them to observational data. Example usage of this package can be found in the example model validation notebook, found at code/model_validation.ipynb.
 
 ## Data sources
 
-### Altimetry data
+# River Gauge
+
+# Water table depth
 
 ## Dependencies
 
