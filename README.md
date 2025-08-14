@@ -47,7 +47,7 @@ This dataset is designed to support educational, research, and exploratory activ
 - MS
     + Example surface water masks of the Skjern catchment derived from Sentinel-2 multispectral imagery (*.tiff)
 
-> \* This repo does not contain all files needed for running the Skjern MIKE SHE model due to large file size. The example data and notebooks here are meant to be used to help the user navigate input files, output files, how to adjust model parameters and validation of the model. To run the model, the complete folder of setup in input files should be downloaded from Zenodo :construction:
+> \* This repo does not contain all files needed for running the Skjern MIKE SHE model due to large file size. The example data and notebooks here are meant to help the user navigate input files, output files, how to adjust model parameters and validation of the model. To run the model, the complete folder of setup and input files should be downloaded from Zenodo :construction:
 
 **In Zenodo:**
 - MapsDK.zip
@@ -63,9 +63,9 @@ The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at 
 
 ## Data sources
 
-# River Gauge
+### River Gauge
 
-# Water table depth
+### Water table depth
 
 ## Dependencies
 
