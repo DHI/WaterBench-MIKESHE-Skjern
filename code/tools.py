@@ -3,6 +3,7 @@ from collections import defaultdict
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import mikeio
 
 def read_plot_etv(filepath, variable='LAI', plot=True):
     """
@@ -83,3 +84,66 @@ def read_plot_etv(filepath, variable='LAI', plot=True):
 
 
     return veg_dfs
+
+def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,layerID=None):
+    """
+    Plot a dfs2 output file.
+    
+    Parameters:
+    - filepath: Path to the dfs2 file.
+    - ax: Matplotlib axis to plot on (optional).
+    - varname: Variable name to plot (optional, if not provided, first variable is used).
+    - timeID: Time index to select from the dfs2 file (default is 0).
+    """
+    ds = mikeio.read(filepath)
+    if varname is None:
+        varname = ds.variables[0].name
+
+    # Check if dfs3 or dfs2
+    if len(ds[0].dims) == 4:
+        data = ds[varname][timeID,layerID]
+    else:
+        data = ds[varname][timeID]
+    
+    if ax is None:
+        fig, ax = plt.subplots(figsize=(9, 6))
+
+    datestr = str(ds[varname][timeID].time[0])[0:10]
+    
+    #capitailize first letter of variable name
+    varname_caps = varname.capitalize() if varname else "Variable"
+
+    data.plot.contourf(ax=ax, cmap='viridis')
+    ax.set_title(f"{varname_caps} at {datestr}")
+
+    # Check if shapefile is provided and plot it
+    if shapefile is not None:
+        shapefile.plot(facecolor='none', edgecolor='black',ax=ax)
+
+
+    plot_settings(ax)
+    
+    return ax
+
+
+def plot_settings(ax):
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_xlabel('')
+    ax.set_ylabel('')
+    # remove plot border
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+
+def plot_wb_output(filepath,title,varlist=None):
+    wb = mikeio.read(filepath)
+    wb_df = wb.to_dataframe() # For more plotting options
+
+    if varlist is not None:
+        wb_df = wb_df[varlist]
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+    wb_df.plot(ax=ax,fontsize=15).legend(loc='center',bbox_to_anchor=(1.15,0.4))
+    plt.ylabel('Storage Depth [mm]',fontsize=15)
+    plt.title(label=title,fontsize=20)
+    plt.show()

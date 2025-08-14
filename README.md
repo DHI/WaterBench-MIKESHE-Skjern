@@ -23,32 +23,37 @@ This dataset is designed to support educational, research, and exploratory activ
 
 ## Folder structure
 
-The repository is organized in the following way
+**The repository is organized in the following way:**
 
 - README.md
 - license
-- observations
-    + River gauge data
+- earth_observation
     + Satellite altimetry
+    + Sentinel-2 water masks
 - code
     + tutorial notebooks
 - MapsDK
-    + Sample input data
+    + \* Sample input data (*.dfs2, *.dfs0)
+    + Domain shapefiles (/DKDomains2013)
+    + \* Geological layer data (/dkmj2019)
+    + River discharge observations (/Qdata)
+    + Well water table depth observations (/Hdata)
+    + MIKE Hydro river cross sections (/Mhydro/*.xns11)
 - Skjern_Models/Setup
     + MIKE SHE model (.she)
     + MIKE Hydro model (.myhdro)
+    + \* Model setup data (*.dfs2)
+    + \* Results folder (/HIP_500m_Skjern_DHI.she - Result Files/)
 - figures
-- output_sample
+- waterbalance_output
 
-Separately from the current repository, you can find the output and input zip files (in Zenodo) :construction:
+> \* Folders and/or files in this location are not all included in the current github repository due to large files sizes. Some sample files are included to run notebooks, but not everything for running a full MIKE SHE model is here. To be able to run the Skjern MIKE SHE model and calibration scripts, the following zip file should be downloaded from Zenodo: :construction:
 
-- input (MapsDK.zip)
+**In Zenodo:**
+- MapsDK.zip
     + Contains complete folders for model inputs (MapsDK) and setup (Skjern_Models)
 
-- output
-    + MIKE model result data
-
-:exclamation: :exclamation: ***As it appears here, only select files needed to run the input data example notebooks are included in the repository. To run MIKE SHE simulations and run the results viewing notebooks, the MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation, but are not included here due to file size.***
+:exclamation: :exclamation: ***The MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation and full use of this repository.***
 
 ## Introduction
 
