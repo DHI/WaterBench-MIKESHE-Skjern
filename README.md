@@ -69,9 +69,10 @@ The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at 
 
 ## Data sources
 
+![Alt text](figures/station_location.png)
+
 ### River Gauge
 
-![Alt text](figures/station_location.png)
 
 ![Alt text](figures/TS_val_Q250019.png)
 
@@ -79,6 +80,11 @@ The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at 
 
 
 ### Water table depth
+
+![Alt text](figures/TS_val_103p1653_2.png)
+
+![Alt text](figures/mod_vs_obs_103p1653_2.png)
+
 
 ## Dependencies
 
