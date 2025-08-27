@@ -56,28 +56,50 @@ This dataset is designed to support educational, research, and exploratory activ
 :exclamation: :exclamation: ***The MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation and full use of the model.***
 
 ## Introduction
-This repository contains an example model setup of a MIKE SHE Integrated Hydrological Model for the Skjern River catchment located on the west coast of Jutland, Denmark. MIKE SHE models the flow of water through the major pathways in the terrestrial water cycle, with modules for overland flow, unsaturated zone, saturated zone, and land use. The model also utilizes the network of rivers, lakes and sewers as defined by a [MIKE Hydro Basin](https://www.dhigroup.com/technologies/mikepoweredbydhi/mike-hydro-basin) model setup. MIKE SHE models can be used for tasks such as catchment or subcatchment scale water resource assessment, analyses of surface and groundwater interactions, predicting flooding events, or simulating the effect of changes to land cover or climate on terrestrial water processes.
+This repository contains an example model setup of a MIKE SHE Integrated Hydrological Model for the Skjern River catchment located on the west coast of Jutland, Denmark. MIKE SHE models the flow of water through the major pathways in the terrestrial water cycle. The model also utilizes the network of rivers, lakes and sewers as defined by a [MIKE Hydro Basin](https://www.dhigroup.com/technologies/mikepoweredbydhi/mike-hydro-basin) model setup.
 
 The repository includes:
 - MIKE SHE model file, setup files, input data, observation data
 - Model output
 - Jupyter notebook guides
 
-The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990 to 12/23/2019. Since there is no hot start included, it is recommended that the first several days of the simulation be discarded before analysis.
 
 ## MIKE SHE Integrated Hydrological Model
 
-MIKE SHE is an integrated hydrological modeling system that emerged in the 1980s to represent the physical processes of water flow through the hydrological cycle in a modular way and with relevant scale. The available process modules - Evapotranspiration, overland flow, unsaturated zone flow, groundwater flow, channel flow - are each governed by their relevant partial differential equations describing the movement of water through their system. Modules can be represented with more conceptual or lumped alternatives, giving the user the ability to tailor model complexity and compute time for their application. A schematic of the MIKE SHE modules is shown below.
+MIKE SHE is an integrated hydrological modeling system that emerged in the 1980s to represent the physical processes of water flow through the hydrological cycle in a modular way and with relevant scale. The available process modules - evapotranspiration, overland flow, unsaturated zone flow, groundwater flow, channel flow - are each governed by their relevant partial differential equations describing the movement of water through their system. Modules can be represented with more conceptual or lumped alternatives, giving the user the ability to tailor model complexity and compute time for their application. The model also has flexibliity in the spatial and temporal discretization, allowing process modules to have the grid size and time step appropriate for the modeling goals and data availability. Typical applications (among many others) for a MIKE SHE model include:
+ 
+- Water resouce management for a river basin
+- Flood modeling and prediction
+- Wetland restoration and management
+- Surface and groundwater interaction analyses
+- Land change effects on basin hydrology
+- Climate change effects on basin hydrology
+- Groundwater withdrawal management
+- Agriculture impact
+- Irrigation management
 
-```{figure} figures/mshe_modules.png
----
-height: 150px
-name: mshe_mods
----
-Here is my figure caption!
-```
+A schematic of the MIKE SHE modules is shown below.
 
-![Alt text](figures/mshe_modules.png "Modules for different processes in MIKE SHE with their options for numerical engines. Arrows indicate how different modules interact. This figure is taken from the MIKE SHE user guide and reference manual, found [here](https://manuals.mikepoweredbydhi.help/latest/Water_Resources/MIKE_SHE_Print.pdf)")
+![Alt text](figures/mshe_modules.png)
+*Modules for different processes in MIKE SHE with their options for numerical engines. Arrows indicate how different modules interact. This figure is taken from the MIKE SHE user guide and reference manual, found [here](https://manuals.mikepoweredbydhi.help/latest/Water_Resources/MIKE_SHE_Print.pdf).*
+
+A MIKE simulation can be run using the [MIKE modeling software](https://www.dhigroup.com/technologies/mikepoweredbydhi), provided that the appropriate input data and setup files are included. Although input and setup files depend on which modules are included and what numerical engines for these models are chosen, basic inputs include:
+
+- Model domain 
+- Topography (DEM)
+- Precipitation timeseries
+
+Detailed information on what inputs are required when different modules are added can be found in the [MIKE SHE user guide and reference manual](https://manuals.mikepoweredbydhi.help/latest/Water_Resources/MIKE_SHE_Print.pdf).
+
+### The Skjern MIKE SHE setup
+
+![Alt text](figures/Skjern_loc.png)
+*Outline of Skjern catchment on the western coast of Denmark.*
+
+The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990 to 12/23/2019. Since there is no hot start included, it is recommended that the first several days of the simulation be discarded before analysis. The model setup here was built by the Geologic Survey of Denmark (GEUS) and includes modules for overland flow (finite difference), unsaturated zone flow (2 layer), evapotranspiration (?), saturated zone flow (finite difference), channel flow (?), and irrigation. Input files include climate timeseries, vegetation maps, irrigation demand, channel network, river cross section morphology, among others. A more detailed list of input files can be found in ```code/explore_input_data.ipynb```. 
+
+The model takes approximately 0.4 hours to run in the provided state. Model outputs include simulated overland flow, groundwater flow, evapotranspiration, water table depth, and river discharge. Additional post-processing of the output files using the MIKE [Water Balance Tool](https://doc.mikepoweredbydhi.help/webhelp/2025/mikeshe/MIKE_SHE_online/Water_Balance/Using_the_Water_Balance_Tool.htm) can provide a breakdown of water storages by component (fx. Irrigation, groundwater, overland water, etc.) for the full simulation timeseries. More detail on MIKE SHE output files and how to view them is shown in ```code/view_mikeshe_results.ipynb```.
+
 
 ## Model validation
 
