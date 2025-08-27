@@ -67,7 +67,10 @@ The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990
 
 ## MIKE SHE Integrated Hydrological Model
 
+![Alt text](figures/SHE_schematics.pdf)
 
+
+![Alt text](figures/mshe_modules.png)
 
 ## Model validation
 
@@ -77,7 +80,7 @@ In situ data for model validation include river gauges and water table depth wel
 
 ![Alt text](figures/station_location.png)
 
-An example comparison of modeled and observed timeseries for on of the river gauges in Skjern catchment is shown below, both as a direct timeseries comparison and a scatter plot of modeled vs. observed discharge. More plots like this can be generated for any of the river and well stations in the model validation notebook, found at ```code/model_validation.ipynb```.
+An example comparison of modeled and observed timeseries for one of the river gauges in Skjern catchment is shown below, both as a direct timeseries comparison and a scatter plot of modeled vs. observed discharge. More plots like this can be generated for any of the river or well stations in the model validation notebook, found at ```code/model_validation.ipynb```.
 
 ![Alt text](figures/TS_val_Q250019.png)
 
@@ -85,6 +88,8 @@ An example comparison of modeled and observed timeseries for on of the river gau
 
 
 ## Data sources
+
+The data used in this folder come from several sources.
 
 | Data          | Source     | Citation | License | 
 | --------      | -------    | -------  | ------- |
