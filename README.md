@@ -67,7 +67,7 @@ The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990
 
 ## MIKE SHE Integrated Hydrological Model
 
-![Alt text](figures/SHE_schematic.pdf)
+![Alt text](figures/SHE_schematic.png)
 
 
 ![Alt text](figures/mshe_modules.png)
