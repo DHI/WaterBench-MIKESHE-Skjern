@@ -69,6 +69,14 @@ The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990
 
 MIKE SHE is an integrated hydrological modeling system that emerged in the 1980s to represent the physical processes of water flow through the hydrological cycle in a modular way and with relevant scale. The available process modules - Evapotranspiration, overland flow, unsaturated zone flow, groundwater flow, channel flow - are each governed by their relevant partial differential equations describing the movement of water through their system. Modules can be represented with more conceptual or lumped alternatives, giving the user the ability to tailor model complexity and compute time for their application. A schematic of the MIKE SHE modules is shown below.
 
+```{figure} figures/mshe_modules.png
+---
+height: 150px
+name: mshe_mods
+---
+Here is my figure caption!
+```
+
 ![Alt text](figures/mshe_modules.png "Modules for different processes in MIKE SHE with their options for numerical engines. Arrows indicate how different modules interact. This figure is taken from the MIKE SHE user guide and reference manual, found [here](https://manuals.mikepoweredbydhi.help/latest/Water_Resources/MIKE_SHE_Print.pdf)")
 
 ## Model validation
