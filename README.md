@@ -96,16 +96,16 @@ Detailed information on what inputs are required when different modules are adde
 ![Alt text](figures/Skjern_loc.png)
 *Outline of Skjern catchment on the western coast of Denmark.*
 
-The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990 to 12/23/2019. Since there is no hot start included, it is recommended that the first several days of the simulation be discarded before analysis. The model setup here was built by the Geologic Survey of Denmark (GEUS) and includes modules for overland flow (finite difference), unsaturated zone flow (2 layer), evapotranspiration (?), saturated zone flow (finite difference), channel flow (?), and irrigation. Input files include climate timeseries, vegetation maps, irrigation demand, channel network, river cross section morphology, among others. A more detailed list of input files can be found in ```code/explore_input_data.ipynb```. 
+The Skjern MIKE SHE model is defined on 500 m grid cells for the period 1/2/1990 to 12/23/2019. Since there is no hot start included, it is recommended that the first several days of the simulation be discarded before analysis. The model setup here was built by the Geologic Survey of Denmark (GEUS) and includes modules for overland flow (finite difference), unsaturated zone flow (2 layer), evapotranspiration (2 layer), saturated zone flow (finite difference), channel flow (higher-order fully dynamic Saint-Venant equations), and irrigation. Input files include climate timeseries, vegetation maps, irrigation demand, channel network, river cross section morphology, among others. A more detailed list of input files can be found in ```code/explore_input_data.ipynb```. 
 
-The model takes approximately 0.4 hours to run in the provided state. Model outputs include simulated overland flow, groundwater flow, evapotranspiration, water table depth, and river discharge. Additional post-processing of the output files using the MIKE [Water Balance Tool](https://doc.mikepoweredbydhi.help/webhelp/2025/mikeshe/MIKE_SHE_online/Water_Balance/Using_the_Water_Balance_Tool.htm) can provide a breakdown of water storages by component (fx. Irrigation, groundwater, overland water, etc.) for the full simulation timeseries. More detail on MIKE SHE output files and how to view them is shown in ```code/view_mikeshe_results.ipynb```.
+The model takes approximately 0.4 hours to run in the provided state. Model outputs include simulated overland flow, groundwater flow, evapotranspiration, water table depth, and river discharge. Additional post-processing of the output files using the MIKE [Water Balance Tool](https://doc.mikepoweredbydhi.help/webhelp/2025/mikeshe/MIKE_SHE_online/Water_Balance/Using_the_Water_Balance_Tool.htm) can provide a breakdown of water storages by component (fx. irrigation, groundwater, overland water, etc.) for the full simulation timeseries. More detail on MIKE SHE output files and how to view them is shown in ```code/view_mikeshe_results.ipynb```.
 
 
 ## Model validation
 
 The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at DHI can be used to validate model outputs by comparing them to observational data. Example usage of this package can be found in the example model validation notebook, found at ```code/model_validation.ipynb```.
 
-In situ data for model validation include river gauges and water table depth wells. The river gauge data can be downloaded from -----. The well data can be downloaded from the National well database (Jupiter) hosted by the Geologic Survey of Denmark (GEUS) [here]{https://eng.geus.dk/products-services-facilities/data-and-maps/national-well-database-jupiter}. Available timeseries for the model simulation period are stored here as dfs0 files, in the folders MapsDK/Qdata/ and MapsDK/Hdata for river discharge and well timeseries, respectively. The location of the measurement stations are shown below:
+In situ data for model validation include river gauges and water table depth wells. Available timeseries for the model simulation period are stored here as dfs0 files, in the folders MapsDK/Qdata/ and MapsDK/Hdata for river discharge and well timeseries, respectively. The location of the measurement stations are shown below:
 
 ![Alt text](figures/station_location.png)
 
@@ -123,7 +123,7 @@ The data used in this folder come from several sources.
 | Data          | Source     | Citation | License | 
 | --------      | -------    | -------  | ------- |
 | River Gauge   | ?          | ?        | ?       |
-| Well          | ?          | ?        | ?       |
+| Well          | GEUS     | GEUS, *National well database (Jupiter)*, https://eng.geus.dk/products-services-facilities/data-and-maps/national-well-database-jupiter        | [Terms of use](https://data.geus.dk/geusmap/terms_20140620.pdf)      |
 | Climate forcings     | DMI, DK model (GEUS)   |  ?    | ?    |
 | Land use, Overland flow, Unsaturated flow, and Saturated zone inputs  | DK model (GEUS)   |  ?    | ?    |
 
