@@ -9,3 +9,14 @@ With conda:
 conda env create -f requirements.yml
 conda activate waterbench_skjern
 ```
+
+# Where to start?
+
+The example notebooks in this folder are meant to help the user navigate what the inputs and outputs of a MIKE SHE model might look like, how they can validate their model with observation data, and how they can change model parameters using the MIKE SHE python API ([MikeShePy](https://docs.mikepoweredbydhi.com/engine_libraries/MShe/MShePyApi/)).
+
+- **explore_input_data.ipynb** — *Description and plots of example input files*
+- **view_mikeshe_results.ipynb** — *Description and plots of example output files from MIKE SHE simulation and water balance post-processing tool*
+- **model_validation.ipynb** — *Perform model validation of MIKE SHE outputs with river discharge and water table depth timeseries data*
+- **format_mshe.ipynb** — *Example code for editing parameters and inputs to a MIKE SHE model and comparing the resulting differences in output*
+- **tools.py** — *Helper module containing useful functions for above notebooks*
+
