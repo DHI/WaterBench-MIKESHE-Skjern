@@ -49,7 +49,7 @@ This dataset is designed to support educational, research, and exploratory activ
 
 > \* This repo does not contain all files needed for running the Skjern MIKE SHE model due to large file size. The example data and notebooks here are meant to help the user navigate input files, output files, how to adjust model parameters and validation of the model. To run the model, the complete folder of setup and input files should be downloaded from Zenodo :construction:
 
-**In Zenodo:**
+**In Zenodo: (TO-DO)**
 - MapsDK.zip
     + Contains complete folders for model inputs (MapsDK) and setup (Skjern_Models)
 
