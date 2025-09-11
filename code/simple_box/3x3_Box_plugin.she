@@ -1,4 +1,4 @@
-// Created     : 2025-09-11 09:58:52
+// Created     : 2025-09-11 10:29:18
 // By          : MIKE IO
 // Version     : 2.6.0
 
@@ -173,7 +173,7 @@
       Touched = 1
       IsDataUsedInSetup = 0
       PyResolve = 1
-      PyPath = |c:\Users\safr\.conda\envs\mshepy_p3p10\python310.dll|
+      PyPath = |c:\Users\safr\.conda\envs\mshepy\python312.dll|
       [PluginFileList]
          Touched = 1
          IsDataUsedInSetup = 0
@@ -183,7 +183,7 @@
             Touched = 1
             IsDataUsedInSetup = 0
             Enable = 1
-            FILE_NAME = |C:\Program Files (x86)\DHI\MIKE Zero\2025\bin\x64\MShePy310.pyd|
+            FILE_NAME = |C:\Program Files (x86)\DHI\MIKE Zero\2025\bin\x64\MShePy312.pyd|
          EndSect  // PluginFile_1
       EndSect  // PluginFileList
    EndSect  // Plugins
