@@ -80,8 +80,8 @@ MIKE SHE is an integrated hydrological modeling system that emerged in the 1980s
 
 A schematic of the MIKE SHE modules is shown below.
 
-![Alt text](figures/mshe_modules.png)
-*Modules for different processes in MIKE SHE with their options for numerical engines. Arrows indicate how different modules interact. This figure is taken from the MIKE SHE user guide and reference manual, found [here](https://manuals.mikepoweredbydhi.help/latest/Water_Resources/MIKE_SHE_Print.pdf).*
+![Alt text](figures/MSHE_schematic_updated.png)
+*Modules for different processes in MIKE SHE with their options for numerical engines. Arrows indicate how different modules interact. This figure is taken from the MIKE SHE user guide and reference manual, found [here](https://userdoc.mikeshe.mikepoweredbydhi.com/).*
 
 A MIKE simulation can be run using the [MIKE modeling software](https://www.dhigroup.com/technologies/mikepoweredbydhi), provided that the appropriate input data and setup files are included. Although input and setup files depend on which modules are included and what numerical engines for these models are chosen, basic inputs include:
 
@@ -89,7 +89,7 @@ A MIKE simulation can be run using the [MIKE modeling software](https://www.dhig
 - Topography (DEM)
 - Precipitation timeseries
 
-Detailed information on what inputs are required when different modules are added can be found in the [MIKE SHE user guide and reference manual](https://manuals.mikepoweredbydhi.help/latest/Water_Resources/MIKE_SHE_Print.pdf).
+Detailed information on what inputs are required when different modules are added can be found in the [MIKE SHE user guide and reference manual](https://userdoc.mikeshe.mikepoweredbydhi.com/).
 
 ### The Skjern MIKE SHE setup
 
