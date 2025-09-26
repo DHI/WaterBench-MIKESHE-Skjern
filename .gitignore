@@ -12,6 +12,10 @@ MapsDK.zip
 code/.extra_books/
 code/simple_box/*
 .vscode/
+observations/MS/
+output_sample/
+model/
+input/
 
 # But do not ignore these specific file types
 # !Skjern_Models/**/*.she
