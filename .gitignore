@@ -17,6 +17,26 @@ output_sample/
 model/
 input/
 
+# Keep a few files for explore_input_data.ipynb
+!input/domain/ID15_oplande_Skjern.shp
+!input/topography/dkmj_topo_0.dfs2
+!input/climate/*
+!input/land_use/DK_Landuse_9kl_5cropsCorr_100m_MB500.dfs2
+!input/land_use/crop_map_irrigation_5class_500m.dfs2
+!input/land_use/Deficit_factor_5veg_inv.dfs0
+!input/land_use/DK_2018_Veg_Prop_inv_100m.etv
+!input/river_lakes_sewers/500m_Skjern.xns11
+
+# Keep a few files for model_validation.ipynb
+!observations/Q_data/Q_filtered.dfs0
+!observations/H_data/H_data_filtered/*
+!observations/H_data/head_evel_SZ.csv
+# !output_sample/mshe_output/HIP_500m_Skjern_DHI_RiverLinks.shp
+# !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_M11.dfs0
+# !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_SZ.dfs0
+
+
+
 # But do not ignore these specific file types
 # !Skjern_Models/**/*.she
 # !Skjern_Models/**/*.mhydro
