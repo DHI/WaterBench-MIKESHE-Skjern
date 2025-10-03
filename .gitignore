@@ -7,6 +7,7 @@ code/format_mshe.ipynb
 .github/
 .input_old/
 .model_old/
+.papers/
 Skjern_Models/**
 MapsDK/
 MapsDK.zip
