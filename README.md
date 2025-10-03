@@ -14,7 +14,6 @@ See the [license](license.txt) for details on data usage.
 This dataset is designed to support educational, research, and exploratory activities, including:
 
 * Experimenting with integrated hydrological modeling with MIKE SHE.
-* Changing model parameters and running simulations with the MIKE SHE Python API.
 * Validating model outputs with insitu and remote sensing observational data.
 * Testing and comparing model parameter calibration methods.
 * Exploring how model outputs change with plenty vs. limited calibration data.
