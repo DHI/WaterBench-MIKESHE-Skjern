@@ -26,40 +26,35 @@ This dataset is designed to support educational, research, and exploratory activ
 **The repository is organized in the following way:**
 
 - README.md
-- license
+- model
+    + MIKE SHE model (.she)
+- \* input
+    + Input data (*.dfs2, *.dfs0) for modules:
+        + climate
+        + domain
+        + land use
+        + rivers, lakes and sewers
+        + topography
+        + saturated zone (Only at Zenodo)
+        + unsaturated zone (Only at Zenodo)
+- observations
+    + River discharge observations (Q_data)
+    + Well water table depth observations (H_data)
+- output sample
+    + \* MIKE SHE output files
+    + Waterbalance post processing output
 - code
     + tutorial notebooks
-- MapsDK
-    + \* Sample input data (*.dfs2, *.dfs0)
-    + Domain shapefiles (/DKDomains2013/*)
-    + \* Geological layer data (/dkmj2019/*)
-    + River discharge observations (/Qdata/*)
-    + Well water table depth observations (/Hdata/*)
-    + MIKE Hydro river cross sections (/Mhydro/*.xns11)
-- Skjern_Models/Setup
-    + MIKE SHE model (.she)
-    + MIKE Hydro model (.myhdro)
-    + \* Model setup data (*.dfs2)
-    + \* Results folder (/HIP_500m_Skjern_DHI.she - Result Files/)
-- waterbalance_output
-    + Output data files from water balance post processing (*.dfs0, *.txt)
-    + Output figure from water balance post processing (.emf)
-- MS
-    + Example surface water masks of the Skjern catchment derived from Sentinel-2 multispectral imagery (*.tiff)
+- license
+- requirements.yml
 
-> \* This repo does not contain all files needed for running the Skjern MIKE SHE model due to large file size. The example data and notebooks here are meant to help the user navigate input files, output files, how to adjust model parameters and validation of the model. To run the model, the complete folder of setup and input files should be downloaded from Zenodo :construction:
-
-**In Zenodo: (TO-DO)**
-- MapsDK.zip
-    + Contains complete folders for model inputs (MapsDK) and setup (Skjern_Models)
-
-:exclamation: :exclamation: ***The MapsDK.zip file should be downloaded and extracted, where the folders MapsDK and Skjern_Models are placed in the main WATERBENCH-MIKESHE-SKJERN directory. These contain the remaining input files needed for simulation and full use of the model.***
+> \* This repo does not contain all files needed for running the Skjern MIKE SHE model due to large file size, particularly in the folders with * above. The example data and notebooks here are meant to help the user navigate input files, output files, and validation of the model. To run the model, the complete folder of setup and input files should be downloaded from Zenodo :construction:
 
 ## Introduction
 This repository contains an example model setup of a MIKE SHE Integrated Hydrological Model for the Skjern River catchment located on the west coast of Jutland, Denmark. MIKE SHE models the flow of water through the major pathways in the terrestrial water cycle. The model also utilizes the network of rivers, lakes and sewers as defined by a [MIKE Hydro Basin](https://www.dhigroup.com/technologies/mikepoweredbydhi/mike-hydro-basin) model setup.
 
 The repository includes:
-- MIKE SHE model file, setup files, input data, observation data
+- MIKE SHE model file, input data, observation data
 - Model output
 - Jupyter notebook guides
 
