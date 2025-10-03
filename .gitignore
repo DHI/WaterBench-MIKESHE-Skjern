@@ -27,7 +27,8 @@ input/
 !input/land_use/DK_2018_Veg_Prop_inv_100m.etv
 !input/rivers_lakes_sewers/500m_Skjern.xns11
 # saturated and unsaturated folders
-!input/saturated/Drain
+!input/saturated/drainage/DrainDepth_dist_500mMB.dfs2
+!input/unsaturated/DK_soil_georeg_250m-50m.DFS2
 
 # Keep a few files for model_validation.ipynb
 !observations/Q_data/Q_filtered.dfs0
