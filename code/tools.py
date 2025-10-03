@@ -84,37 +84,49 @@ def read_plot_etv(filepath, variable='LAI', plot=True):
 
 
     return veg_dfs
-
-def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,layerID=None):
+def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,layerID=None, time1=None, time2=None):
     """
-    Plot a dfs2 output file.
+    Plot a dfs2 output file, averaged over a time range if provided, else at a specific time index.
     
     Parameters:
     - filepath: Path to the dfs2 file.
     - ax: Matplotlib axis to plot on (optional).
     - varname: Variable name to plot (optional, if not provided, first variable is used).
     - timeID: Time index to select from the dfs2 file (default is 0).
+    - shapefile: Geopandas dataframe of shapefile to overlay (optional).
+    - layerID: Layer index to select from dfs3 file (if applicable).
+    - time1, time2: Time range to average over (if None, use full range).
     """
     ds = mikeio.read(filepath)
     if varname is None:
         varname = ds.variables[0].name
 
-    # Check if dfs3 or dfs2
-    if len(ds[0].dims) == 4:
-        data = ds[varname][timeID,layerID]
-    else:
-        data = ds[varname][timeID]
     
     if ax is None:
         fig, ax = plt.subplots(figsize=(9, 6))
 
-    datestr = str(ds[varname][timeID].time[0])[0:10]
-    
+    # check if time1 and time2 are provided for averaging
+    if time1 is not None and time2 is not None:
+        if len(ds[0].dims) == 4:
+            data = ds[varname].sel(time=slice(time1, time2)).mean()[layerID]
+            datestr = f"AVG {str(time1)} to {str(time2)}, L{layerID}"
+        else:
+            data = ds[varname].sel(time=slice(time1, time2)).mean()
+            datestr = f"AVG {str(time1)} to {str(time2)}"
+
+    else:
+        # Check if dfs3 or dfs2
+        if len(ds[0].dims) == 4:
+            data = ds[varname][timeID,layerID]
+        else:
+            data = ds[varname][timeID]
+        datestr = str(ds[varname][timeID].time[0])[0:10]
+
     #capitailize first letter of variable name
     varname_caps = varname.capitalize() if varname else "Variable"
 
     data.plot.contourf(ax=ax, cmap='viridis')
-    ax.set_title(f"{varname_caps} at {datestr}")
+    ax.set_title(f"{varname_caps} {datestr}")
 
     # Check if shapefile is provided and plot it
     if shapefile is not None:
@@ -124,6 +136,7 @@ def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,l
     plot_settings(ax)
     
     return ax
+
 
 
 def plot_settings(ax):
