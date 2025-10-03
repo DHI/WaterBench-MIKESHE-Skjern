@@ -1,6 +1,7 @@
 # Files
 update_requirements.sh
 mkdocs.yml
+code/format_mshe.ipynb
 
 # Folders
 .github/
