@@ -23,9 +23,9 @@ input/
 !input/climate/*
 !input/land_use/DK_Landuse_9kl_5cropsCorr_100m_MB500.dfs2
 !input/land_use/crop_map_irrigation_5class_500m.dfs2
-!input/land_use/Deficit_factor_5veg_inv.dfs0
+!input/land_use/Deficit_factor_5veg_tpl.dfs0
 !input/land_use/DK_2018_Veg_Prop_inv_100m.etv
-!input/river_lakes_sewers/500m_Skjern.xns11
+!input/rivers_lakes_sewers/500m_Skjern.xns11
 
 # Keep a few files for model_validation.ipynb
 !observations/Q_data/Q_filtered.dfs0
@@ -35,6 +35,18 @@ input/
 # !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_M11.dfs0
 # !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_SZ.dfs0
 
+# Keep files for view_mikeshe_results.ipynb
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_overland.dfs2
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_3DSZflow.dfs3
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_ET_UzCells.dfs2
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_ET_UzCells.dfs2
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_overland.dfs2
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_overland.dfs2
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_3DSZflow.dfs3
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_3DSZflow.dfs3
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_2DSZ.dfs2
+!output_sample/mshe_output/HIP_500m_Skjern_DHI_3DSZ.dfs3
+!output_sample/waterbalance_output/*
 
 
 # But do not ignore these specific file types
