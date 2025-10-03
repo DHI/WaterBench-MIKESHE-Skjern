@@ -48,6 +48,13 @@ input/
 !output_sample/mshe_output/HIP_500m_Skjern_DHI_3DSZ.dfs3
 !output_sample/waterbalance_output/*
 
+# Keep model files
+!model/500m_Skjern.mshe
+
+# add folders?
+!input/saturated/
+!input/unsaturated/
+!model/
 
 # But do not ignore these specific file types
 # !Skjern_Models/**/*.she
