@@ -1,4 +1,4 @@
-# Integrated Hydrological Model of Skjern Catchment
+# Integrated Hydrological Model of Skjern Å Catchment
 This README provides practical and background information on the dataset. The dataset can be cited as:
 
 == Include citation after publishing ==
@@ -32,6 +32,7 @@ This dataset is designed to support educational, research, and exploratory activ
         + climate
         + domain
         + land use
+        + overland (Only at Zenodo)
         + rivers, lakes and sewers
         + topography
         + saturated zone (Only at Zenodo)
