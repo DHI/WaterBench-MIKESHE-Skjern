@@ -4,7 +4,7 @@
 
 This README provides practical and background information on the dataset. The dataset can be cited as:
 
-> == Include citation after publishing - Joint DHI  GEUS citaiton, DHI as first listed and corresponding contact ==
+> == Include citation after publishing - Joint DHI  GEUS citaiton, DHI as first listed and corresponding contact, licesnse should be CC BY-SA 4.0 ==
 
 See the [license](license.txt) for details on data usage.
 
@@ -13,12 +13,14 @@ See the [license](license.txt) for details on data usage.
 
 The Skjern Å catchment model and dataset presented here is extracted from The National Hydrological Model of Denmark (DK-model) from the Geologic Survey of Denmark (GEUS), and any use of the dataset here should include proper citation to this model. THhe DK-model can be cited as:
 
-> The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)
+> The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020; Ondracek, M., 2023)
 
-Where
+With
 > Henriksen, H. J., Kragh, S. J., Gotfredsen, J., Ondracek, M., van Til, M., Jakobsen, A., Schneider, R. J. M., Koch, J., Troldborg, L., Rasmussen, P., Pasten-Zapata, E., and Stisen, S.: Udvikling af landsdækkende modelberegninger af terrænnære hydrologiske forhold i 100m grid ved anvendelse af DK-modellen: Dokumentationsrapport vedr. modelleverancer til Hydrologisk Informations- og Prognosesystem, Udarbejdet som en del af Den Fællesoffen, GEUS, https://doi.org/10.22008/gpub/38113, 2021.
 
 > Stisen, S., Ondracek, M., Troldborg, L., Schneider, R. J. M., and Til, M. J. van: National Vandressource Model, Modelopstilling og kalibrering af DK-model 2019, GEUS, Copenhagen, https://doi.org/10.22008/gpub/32631, 2020.
+
+> Ondracek, M. DK-model HIP - modelsetup 500- and 100m (DK2) V3, GEUS Dataverse, https://doi.org/10.22008/FK2/27TS3M, 2023
 
 
 ## Intended use
@@ -129,13 +131,13 @@ The data used in this folder come from several sources.
 
 | **Data Class**           | **Data Name**                                                                 | **Source**           | **Citation**                                                                                                                                                                   | **License** |
 |---------------------------|-------------------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| **Climate variables**     | Precipitation                                                                | DMI                  | Danish Meteorological Institute (2024)                                                                                                                                          | CC0 1.0            |
-|                           | Temperature                                                                  | DMI                  | Danish Meteorological Institute (2024)                                                                                                                                          | CC0 1.0            |
-|                           | Potential Evapotranspiration                                                 | DMI                  | Danish Meteorological Institute (2024)                                                                                                                                          | CC0 1.0            |
-| **Hydrological variables**| Observed Streamflow                                                          | Aarhus University     | Danish Centre for Environment and Energy, Aarhus University (DCE, 2020), at https://odaforalle.au.dk                                                                                                       | CC0 1.0            |
-|                           | Groundwater well height and abstraction                                      | GEUS                 | GEUS National Well Database (Jupiter, 2023) at https://eng.geus.dk/products-services-facilities/data-and-maps/national-well-database-jupiter                                                                                                                                    | CC0 1.0, [Terms of Use](https://data.geus.dk/geusmap/terms_20140620.pdf)
-|                           | Model outputs                                                                | GEUS                 | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)                                                        | CC0 1.0            |
-| **Model Inputs**          | All other inputs: Crops and land use, overland flow parameters, geologic layers, etc. | GEUS                 | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)                                                        | CC0 1.0            |
+| **Climate variables**     | Precipitation                                                                | DMI                  | Danish Meteorological Institute (2024)                                                                                                                                          | CC BY 4.0, [Terms of Use](https://opendatadocs.dmi.govcloud.dk/Terms_of_Use)          |
+|                           | Temperature                                                                  | DMI                  | Danish Meteorological Institute (2024)                                                                                                                                          | CC BY 4.0, [Terms of Use]https://opendatadocs.dmi.govcloud.dk/Terms_of_Use)            |
+|                           | Potential Evapotranspiration                                                 | DMI                  | Danish Meteorological Institute (2024)                                                                                                                                          | CC BY 4.0, [Terms of Use](https://opendatadocs.dmi.govcloud.dk/Terms_of_Use)            |
+| **Hydrological variables**| Observed Streamflow                                                          | Aarhus University     | Danish Centre for Environment and Energy, Aarhus University (DCE, 2020), at https://odaforalle.au.dk                                                                                                       | ----            |
+|                           | Groundwater well height and abstraction                                      | GEUS                 | GEUS National Well Database (Jupiter, 2023) at https://eng.geus.dk/products-services-facilities/data-and-maps/national-well-database-jupiter                                                                                                                                    | [Terms of Use](https://data.geus.dk/geusmap/terms_20140620.pdf)
+|                           | Model outputs                                                                | GEUS                 | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020; Ondracek, M., 2023)                                                        | CC BY-SA 4.0            |
+| **Model Inputs**          | All other inputs: Crops and land use, overland flow parameters, geologic layers, etc. | GEUS                 | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020; Ondracek, M., 2023)                                                        | CC BY-SA 4.0            |
 
 
 ## Dependencies
