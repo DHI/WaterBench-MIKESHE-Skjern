@@ -132,9 +132,9 @@ The data used in this folder come from several sources.
 |------- | Temperature      | DMI    | Danish Meteorological Institute (2024)  | ------- |
 | -------| Potential Evapotranspiration      | DMI    | Danish Meteorological Institute (2024)  | ------- |
 |Hydrological variables | Observed Streamflow |  Aarhus University    | Danish Centre for Environment and Energy, Aarhus University (DCE, 2020)    | -------  |
- |------- | Groundwater well height | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
- | -------| Groundwater abstraction | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
- | -------| Model outputs      | GEUS | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)    | -------  |
+|------- | Groundwater well height | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
+| -------| Groundwater abstraction | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
+| -------| Model outputs      | GEUS | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)    | -------  |
 Model Inputs | All other inputs: Crops and land use, overland flow parameters, geologic layers, etc. | GEUS | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)    | -------  |
 
 ## Dependencies
