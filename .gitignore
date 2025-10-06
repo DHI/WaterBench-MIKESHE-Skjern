@@ -30,6 +30,8 @@ input/
 !input/rivers_lakes_sewers/500m_Skjern.xns11
 # saturated and unsaturated folders
 !input/saturated/drainage/DrainDepth_dist_500mMB.dfs2
+!input/saturated/FOHM_table_translated.pdf
+!input/saturated/README.md
 !input/unsaturated/DK_soil_georeg_250m-50m.DFS2
 
 # Keep a few files for model_validation.ipynb
