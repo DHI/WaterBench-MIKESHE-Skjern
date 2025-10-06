@@ -127,21 +127,15 @@ An example comparison of modeled and observed timeseries for one of the river ga
 
 The data used in this folder come from several sources.
 
-Data class | Data Name       | Source     | Citation | License | 
-Climate variables | Precipitation      | DMI   | Danish Meteorological Institute (2024)  | ------- |
- | Temperature      | DMI    | Danish Meteorological Institute (2024)  | ------- |
- | Potential Evapotranspiration      | DMI    | Danish Meteorological Institute (2024)  | ------- |
-Hydrological variables | Observed Streamflow |  Aarhus University    | Danish Centre for Environment and Energy, Aarhus University (DCE, 2020)    | -------  |
-  | Groundwater well height | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
-  | Groundwater abstraction | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
- | Model outputs      | GEUS | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)    | -------  |
+| Data class | Data Name       | Source     | Citation | License | 
+| Climate variables | Precipitation      | DMI   | Danish Meteorological Institute (2024)  | ------- |
+| | Temperature      | DMI    | Danish Meteorological Institute (2024)  | ------- |
+| | Potential Evapotranspiration      | DMI    | Danish Meteorological Institute (2024)  | ------- |
+|Hydrological variables | Observed Streamflow |  Aarhus University    | Danish Centre for Environment and Energy, Aarhus University (DCE, 2020)    | -------  |
+ | | Groundwater well height | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
+ | | Groundwater abstraction | GEUS | GEUS National Well Database (Jupiter, 2023)    | -------  |
+ | | Model outputs      | GEUS | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)    | -------  |
 Model Inputs | All other inputs: Crops and land use, overland flow parameters, geologic layers, etc. | GEUS | The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020)    | -------  |
-
-| River Gauge   | ?          | ?        | ?       |
-| Well          | GEUS     | GEUS, *National well database (Jupiter)*, https://eng.geus.dk/products-services-facilities/data-and-maps/national-well-database-jupiter        | [Terms of use](https://data.geus.dk/geusmap/terms_20140620.pdf)      |
-| Climate forcings     | DMI, DK model (GEUS)   |  ?    | ?    |
-| Land use, Overland flow, Unsaturated flow, and Saturated zone inputs  | DK model (GEUS)   |  ?    | ?    |
-
 
 ## Dependencies
 
