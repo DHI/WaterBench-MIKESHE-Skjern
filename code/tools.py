@@ -4,6 +4,49 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import mikeio
+import numpy as np
+import rioxarray
+import xarray
+
+
+def clip_2_box(ds_big, bbox=[0,0,0,0], input_crs=None): # for trimming xarray datasets
+    
+    xmin, ymin, xmax, ymax = bbox
+
+    if type(ds_big) is mikeio.dataset._dataset.Dataset:
+        if input_crs is None:
+            raise ValueError("If input is a mikeio dataset, 'input_crs' must be provided.")
+        
+        # Convert to xarray before trimming
+        ds_big = ds_big.to_xarray()
+        ds_big.rio.write_crs(input_crs, inplace=True)
+        
+
+    if type(ds_big) is xarray.core.dataset.Dataset:
+        ds_clip = ds_big.rio.clip_box(
+        minx=xmin,
+        miny=ymin,
+        maxx=xmax,
+        maxy=ymax,
+    )
+    return ds_clip # xarray dataset
+
+def get_box(shp=None, dfs2=None, buffer=5000):
+    if shp is None and dfs2 is None:
+        raise ValueError("Either 'shp' or 'dfs2' must be provided.")
+    if dfs2 is not None:
+        xmin = np.min(dfs2.geometry.x)
+        ymin = np.min(dfs2.geometry.y)
+        xmax = np.max(dfs2.geometry.x)
+        ymax = np.max(dfs2.geometry.y)
+        return xmin, ymin, xmax, ymax
+    if dfs2 is None and shp is not None:
+        xmin, ymin, xmax, ymax = shp.total_bounds
+        minx=xmin-buffer
+        miny=ymin-buffer
+        maxx=xmax+buffer
+        maxy=ymax+buffer
+    return minx, miny, maxx, maxy
 
 def read_plot_etv(filepath, variable='LAI', plot=True):
     """
