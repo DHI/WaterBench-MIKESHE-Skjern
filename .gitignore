@@ -18,6 +18,7 @@ observations/MS/
 output_sample/
 model/
 input/
+.preprocessing/
 
 # Keep a few files for explore_input_data.ipynb
 !input/domain/ID15_oplande_Skjern.shp
