@@ -11,7 +11,7 @@ See the [license](license.txt) for details on data usage.
 > [!CAUTION]  
 > This model is **not calibrated** for operational use. It is intended for **educational and research purposes only**, and the results **must not** be used for decision-making. The performance shown here does **not** reflect that of DHI’s high-resolution models.
 
-The Skjern Å catchment model and dataset presented here is extracted from The National Hydrological Model of Denmark (DK-model) from the Geologic Survey of Denmark (GEUS), and any use of the dataset here should include proper citation to this model. THhe DK-model can be cited as:
+The Skjern Å catchment model and dataset presented here is extracted from **The National Hydrological Model of Denmark (DK-model)** from the Geologic Survey of Denmark (GEUS), and any use of the dataset here should include proper citation to this model. The DK-model can be cited as:
 
 > The National Hydrological Model of Denmark (DK-model, abbreviated as DKM; Henriksen et al., 2021; Stisen et al., 2020; Ondracek, M., 2023)
 
