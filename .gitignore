@@ -21,12 +21,12 @@ input/
 .preprocessing/
 
 # Keep a few files for explore_input_data.ipynb
-!input/domain/ID15_oplande_Skjern.shp
+!input/domain/Skjern.shp
 !input/topography/dkmj_topo_0.dfs2
 !input/climate/*
-!input/land_use/DK_Landuse_9kl_5cropsCorr_100m_MB500.dfs2
+!input/land_use/DK_Landuse_9classes_5cropsCorr_100m_MB500.dfs2
 !input/land_use/crop_map_irrigation_5class_500m.dfs2
-!input/land_use/Deficit_factor_5veg_tpl.dfs0
+!input/land_use/Deficit_factor_5veg_inv.dfs0
 !input/land_use/DK_2018_Veg_Prop_inv_100m.etv
 !input/rivers_lakes_sewers/500m_Skjern.xns11
 # saturated and unsaturated folders
