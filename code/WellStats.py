@@ -119,7 +119,7 @@ def main():
     if ((stat_type=='dtp') | (stat_type=='dtb')) & (WS.columns.isin(['WTDEPTH']).sum()==0):
         sys.exit("ERROR: Specified dtp as HeadItemText (stats type), but no column 'WTDEPTH' in observations input file!")
     if (stat_type=='head') & (WS.columns.isin(['PEJL']).sum()==0):
-        sys.exit("ERROR: Specified dtp as HeadItemText (stats type), but no column 'WTDEPTH' in observations input file!")
+        sys.exit("ERROR: Specified head as HeadItemText (stats type), but no column 'PEJL' in observations input file!")
     if 'comment' not in WS.columns:
         WS['comment'] = pd.NA
     WS = WS.astype({'comment':'str'}) #convert to string[pandas] to allow easier handling later
