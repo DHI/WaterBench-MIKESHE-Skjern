@@ -7,6 +7,8 @@ import mikeio
 import numpy as np
 import rioxarray
 import xarray
+from mikeio import ItemInfo, EUMType, EUMUnit
+
 
 
 def clip_2_box(ds_big, bbox=[0,0,0,0], input_crs=None): # for trimming xarray datasets
@@ -47,6 +49,32 @@ def get_box(shp=None, dfs2=None, buffer=5000):
         maxx=xmax+buffer
         maxy=ymax+buffer
     return minx, miny, maxx, maxy
+
+
+
+def ds_2_dfs2(ds, new_filename, original_dfs2=None, name=None, unit=None,type=None, projection=None, new_dfs2_name=None, domain=None, plot_flag=False):
+
+    if original_dfs2 is not None:
+        name = original_dfs2[original_dfs2.items[0]].name
+        unit = original_dfs2[original_dfs2.items[0]].unit
+        type = original_dfs2[original_dfs2.items[0]].type
+        projection = original_dfs2.geometry.projection
+
+    time = pd.DatetimeIndex(ds['time'])
+    geometry = mikeio.Grid2D(x=ds.x.values, y=ds.y.values, projection=projection)
+
+    if new_dfs2_name is None:
+        new_dfs2_name = name
+    dfs2_out = mikeio.DataArray(data=ds[name].values,time=time, geometry=geometry, item=ItemInfo(new_dfs2_name, type, unit))
+    mds_out = mikeio.Dataset([dfs2_out])
+    mds_out.to_dfs(new_filename)
+
+    if plot_flag:
+        fig, ax = plt.subplots(figsize=(6, 6))
+        mds_out[0].plot(title=f'DFS2 out {name}, t1',ax=ax)
+        if domain is not None:
+            domain.plot(facecolor='none', edgecolor='black',ax=ax)
+        plt.show()
 
 def read_plot_etv(filepath, variable='LAI', plot=True):
     """
@@ -168,7 +196,7 @@ def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,l
     #capitailize first letter of variable name
     varname_caps = varname.capitalize() if varname else "Variable"
 
-    data.plot.contourf(ax=ax, cmap='viridis')
+    data.plot(ax=ax, cmap='viridis')
     ax.set_title(f"{varname_caps} {datestr}")
 
     # Check if shapefile is provided and plot it
