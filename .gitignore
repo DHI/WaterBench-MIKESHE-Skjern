@@ -2,6 +2,7 @@
 update_requirements.sh
 mkdocs.yml
 code/format_mshe.ipynb
+code/format_WS_observations.ipynb
 
 # Folders
 .github/

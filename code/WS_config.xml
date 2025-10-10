@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <PreProcessedDFS2>[path to PreProcessed.dfs2 file]</PreProcessedDFS2>
-    <PreProcessedDFS3>[path to PreProcessed_3DSZ.dfs3 file]</PreProcessedDFS3>
-    <ObservationFile>[path to WS_input observation file]</ObservationFile>
-    <ResultFile>[path to 3DZS.dfs3 result file]</ResultFile>
-    <HeadItemText>['head elevation in saturated zone' or 'depth to <top/bottom> phreatic surface (negative)']</HeadItemText>
-    <PhreaticUseLayerBelow>[true/false]</PhreaticUseLayerBelow>
-    <EpsilonForPhreatic>[threshold to determine dry layer]</EpsilonForPhreatic>
+    <PreProcessedDFS2>[..\output_sample\mshe_output\HIP_500m_Skjern_DHI_PreProcessed.DFS2]</PreProcessedDFS2>
+    <PreProcessedDFS3>[..\output_sample\mshe_output\HIP_500m_Skjern_DHI_PreProcessed_3DSZ.DFS3]</PreProcessedDFS3>
+    <ObservationFile>[..\obsercations\H_data\WS_input.csv]</ObservationFile>
+    <ResultFile>[..\output_sample\mshe_output\HIP_500m_Skjern_DHI_3DSZ.dfs3]</ResultFile>
+    <HeadItemText>['head elevation in saturated zone']</HeadItemText>
+    <PhreaticUseLayerBelow>[true]</PhreaticUseLayerBelow>
+    <EpsilonForPhreatic>[0.2]</EpsilonForPhreatic>
 </Configuration>
