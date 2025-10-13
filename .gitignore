@@ -48,20 +48,16 @@ input/land_use/.old_files/*
 # !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_M11.dfs0
 # !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_SZ.dfs0
 
-# Keep files for view_mikeshe_results.ipynb
-!output_sample/mshe_output/Skjern_500m_overland.dfs2
-!output_sample/mshe_output/Skjern_500m_3DSZflow.dfs3
-!output_sample/mshe_output/Skjern_500m_ET_UzCells.dfs2
-!output_sample/mshe_output/Skjern_500m_ET_UzCells.dfs2
-!output_sample/mshe_output/Skjern_500m_overland.dfs2
-!output_sample/mshe_output/Skjern_500m_overland.dfs2
-!output_sample/mshe_output/Skjern_500m_3DSZflow.dfs3
-!output_sample/mshe_output/Skjern_500m_3DSZflow.dfs3
-!output_sample/mshe_output/Skjern_500m_2DSZ.dfs2
-!output_sample/mshe_output/Skjern_500m_3DSZ.dfs3
-!output_sample/mshe_output/Skjern_500m_RiverLinks.shp
-!output_sample/mshe_output/Skjern_500mDetailedTS_M11.dfs0
-!output_sample/mshe_output/Skjern_500mDetailedTS_SZ.dfs0
+## Keep files for view_mikeshe_results.ipynb
+# !output_sample/mshe_output/Skjern_500m_overland.dfs2
+# !output_sample/mshe_output/Skjern_500m_3DSZflow.dfs3
+# !output_sample/mshe_output/Skjern_500m_ET_UzCells.dfs2
+# !output_sample/mshe_output/Skjern_500m_overland.dfs2
+# !output_sample/mshe_output/Skjern_500m_2DSZ.dfs2
+# !output_sample/mshe_output/Skjern_500m_3DSZ.dfs3
+# !output_sample/mshe_output/Skjern_500m_RiverLinks.shp
+# !output_sample/mshe_output/Skjern_500mDetailedTS_M11.dfs0
+# !output_sample/mshe_output/Skjern_500mDetailedTS_SZ.dfs0
 !output_sample/waterbalance_output/*
 
 # add model files
