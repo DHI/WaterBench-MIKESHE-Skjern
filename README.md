@@ -62,7 +62,7 @@ This dataset is designed to support educational, research, and exploratory activ
 - license
 - requirements.yml
 
-> \* This repo does not contain all files needed for running the Skjern MIKE SHE model due to large file size, particularly in the folders with * above. The example data and notebooks here are meant to help the user navigate input files, output files, and validation of the model. To run the model, the complete folder of setup and input files should be downloaded from Zenodo :construction:
+> \* This repo does not contain all files needed for running the Skjern MIKE SHE model and notebooks due to large file size, particularly in the folders with * above. The example data and notebooks here are meant to help the user navigate input files, output files, and validation of the model. To run the model and notebooks, the complete folder of setup and input files should be downloaded from Zenodo :construction:
 
 ## Introduction
 This repository contains an example model setup of a MIKE SHE Integrated Hydrological Model for the Skjern River catchment located on the west coast of Jutland, Denmark. MIKE SHE models the flow of water through the major pathways in the terrestrial water cycle. The model also utilizes the network of rivers, lakes and sewers as defined by a [MIKE Hydro Basin](https://www.dhigroup.com/technologies/mikepoweredbydhi/mike-hydro-basin) model setup.
