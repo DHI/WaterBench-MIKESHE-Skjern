@@ -23,6 +23,7 @@ input/
 input/rivers_lakes_sewers/.old_files/*
 input/climate/.old_files/*
 input/land_use/.old_files/*
+observations/H_data/.old_files/*
 
 # Keep a few files for explore_input_data.ipynb
 !input/README.md
