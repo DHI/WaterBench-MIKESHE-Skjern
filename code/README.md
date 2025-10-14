@@ -18,4 +18,6 @@ The example notebooks in this folder are meant to help the user navigate what th
 - **view_mikeshe_results.ipynb** — *Description and plots of example output files from MIKE SHE simulation and water balance post-processing tool*
 - **model_validation.ipynb** — *Perform model validation of MIKE SHE outputs with river discharge and water table depth timeseries data*
 - **tools.py** — *Helper module containing useful functions for above notebooks*
+- **WellStats.py** — *Well statistics tool - used to estimate model performance at wells separated by well layer (depth levels below ground). Script provided by GEUS, see script header for more details.*
+- **WS_config.xml** — *Configuration file for running well statistics tool.*
 
