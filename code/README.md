@@ -14,7 +14,7 @@ conda activate waterbench_skjern
 
 The example notebooks in this folder are meant to help the user navigate what the inputs and outputs of a MIKE SHE model might look like and how they can validate their model with observation data.
 
-- **explore_input_data.ipynb** — *Description and plots of example input files*
+- **explore_input_data.ipynb** — *Exploring example input data files*
 - **view_mikeshe_results.ipynb** — *Description and plots of example output files from MIKE SHE simulation and water balance post-processing tool*
 - **model_validation.ipynb** — *Perform model validation of MIKE SHE outputs with river discharge and water table depth timeseries data*
 - **tools.py** — *Helper module containing useful functions for above notebooks*
