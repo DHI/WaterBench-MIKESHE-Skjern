@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <PreProcessedDFS2>..\output_sample\mshe_output\Skjern_500m_PreProcessed.DFS2</PreProcessedDFS2>
+    <PreProcessedDFS3>..\output_sample\mshe_output\Skjern_500m_PreProcessed_3DSZ.DFS3</PreProcessedDFS3>
+    <ObservationFile>..\observations\H_data\WS_input_1990-2010.csv</ObservationFile>
+    <ResultFile>..\output_sample\mshe_output\Skjern_500m_3DSZ.dfs3</ResultFile>
+    <HeadItemText>head elevation in saturated zone</HeadItemText>
+    <PhreaticUseLayerBelow>true</PhreaticUseLayerBelow>
+    <EpsilonForPhreatic>0.02</EpsilonForPhreatic>
+</Configuration>

@@ -4,6 +4,77 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import mikeio
+import numpy as np
+import rioxarray
+import xarray
+from mikeio import ItemInfo, EUMType, EUMUnit
+
+
+
+def clip_2_box(ds_big, bbox=[0,0,0,0], input_crs=None): # for trimming xarray datasets
+    
+    xmin, ymin, xmax, ymax = bbox
+
+    if type(ds_big) is mikeio.dataset._dataset.Dataset:
+        if input_crs is None:
+            raise ValueError("If input is a mikeio dataset, 'input_crs' must be provided.")
+        
+        # Convert to xarray before trimming
+        ds_big = ds_big.to_xarray()
+        ds_big.rio.write_crs(input_crs, inplace=True)
+        
+
+    if type(ds_big) is xarray.core.dataset.Dataset:
+        ds_clip = ds_big.rio.clip_box(
+        minx=xmin,
+        miny=ymin,
+        maxx=xmax,
+        maxy=ymax,
+    )
+    return ds_clip # xarray dataset
+
+def get_box(shp=None, dfs2=None, buffer=5000):
+    if shp is None and dfs2 is None:
+        raise ValueError("Either 'shp' or 'dfs2' must be provided.")
+    if dfs2 is not None:
+        xmin = np.min(dfs2.geometry.x)
+        ymin = np.min(dfs2.geometry.y)
+        xmax = np.max(dfs2.geometry.x)
+        ymax = np.max(dfs2.geometry.y)
+        return xmin, ymin, xmax, ymax
+    if dfs2 is None and shp is not None:
+        xmin, ymin, xmax, ymax = shp.total_bounds
+        minx=xmin-buffer
+        miny=ymin-buffer
+        maxx=xmax+buffer
+        maxy=ymax+buffer
+    return minx, miny, maxx, maxy
+
+
+
+def ds_2_dfs2(ds, new_filename, original_dfs2=None, name=None, unit=None,type=None, projection=None, new_dfs2_name=None, domain=None, plot_flag=False):
+
+    if original_dfs2 is not None:
+        name = original_dfs2[original_dfs2.items[0]].name
+        unit = original_dfs2[original_dfs2.items[0]].unit
+        type = original_dfs2[original_dfs2.items[0]].type
+        projection = original_dfs2.geometry.projection
+
+    time = pd.DatetimeIndex(ds['time'])
+    geometry = mikeio.Grid2D(x=ds.x.values, y=ds.y.values, projection=projection)
+
+    if new_dfs2_name is None:
+        new_dfs2_name = name
+    dfs2_out = mikeio.DataArray(data=ds[name].values,time=time, geometry=geometry, item=ItemInfo(new_dfs2_name, type, unit))
+    mds_out = mikeio.Dataset([dfs2_out])
+    mds_out.to_dfs(new_filename)
+
+    if plot_flag:
+        fig, ax = plt.subplots(figsize=(6, 6))
+        mds_out[0].plot(title=f'DFS2 out {name}, t1',ax=ax)
+        if domain is not None:
+            domain.plot(facecolor='none', edgecolor='black',ax=ax)
+        plt.show()
 
 def read_plot_etv(filepath, variable='LAI', plot=True):
     """
@@ -84,37 +155,49 @@ def read_plot_etv(filepath, variable='LAI', plot=True):
 
 
     return veg_dfs
-
-def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,layerID=None):
+def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,layerID=None, time1=None, time2=None):
     """
-    Plot a dfs2 output file.
+    Plot a dfs2 output file, averaged over a time range if provided, else at a specific time index.
     
     Parameters:
     - filepath: Path to the dfs2 file.
     - ax: Matplotlib axis to plot on (optional).
     - varname: Variable name to plot (optional, if not provided, first variable is used).
     - timeID: Time index to select from the dfs2 file (default is 0).
+    - shapefile: Geopandas dataframe of shapefile to overlay (optional).
+    - layerID: Layer index to select from dfs3 file (if applicable).
+    - time1, time2: Time range to average over (if None, use full range).
     """
     ds = mikeio.read(filepath)
     if varname is None:
         varname = ds.variables[0].name
 
-    # Check if dfs3 or dfs2
-    if len(ds[0].dims) == 4:
-        data = ds[varname][timeID,layerID]
-    else:
-        data = ds[varname][timeID]
     
     if ax is None:
         fig, ax = plt.subplots(figsize=(9, 6))
 
-    datestr = str(ds[varname][timeID].time[0])[0:10]
-    
+    # check if time1 and time2 are provided for averaging
+    if time1 is not None and time2 is not None:
+        if len(ds[0].dims) == 4:
+            data = ds[varname].sel(time=slice(time1, time2)).mean()[layerID]
+            datestr = f"AVG {str(time1)} to {str(time2)}, L{layerID}"
+        else:
+            data = ds[varname].sel(time=slice(time1, time2)).mean()
+            datestr = f"AVG {str(time1)} to {str(time2)}"
+
+    else:
+        # Check if dfs3 or dfs2
+        if len(ds[0].dims) == 4:
+            data = ds[varname][timeID,layerID]
+        else:
+            data = ds[varname][timeID]
+        datestr = str(ds[varname][timeID].time[0])[0:10]
+
     #capitailize first letter of variable name
     varname_caps = varname.capitalize() if varname else "Variable"
 
-    data.plot.contourf(ax=ax, cmap='viridis')
-    ax.set_title(f"{varname_caps} at {datestr}")
+    data.plot(ax=ax, cmap='viridis')
+    ax.set_title(f"{varname_caps} {datestr}")
 
     # Check if shapefile is provided and plot it
     if shapefile is not None:
@@ -124,6 +207,7 @@ def plot_dfs2_output(filepath, varname=None, timeID=0, ax=None, shapefile=None,l
     plot_settings(ax)
     
     return ax
+
 
 
 def plot_settings(ax):

@@ -12,11 +12,12 @@ conda activate waterbench_skjern
 
 # Where to start?
 
-The example notebooks in this folder are meant to help the user navigate what the inputs and outputs of a MIKE SHE model might look like, how they can validate their model with observation data, and how they can change model parameters using the MIKE SHE python API ([MikeShePy](https://docs.mikepoweredbydhi.com/engine_libraries/MShe/MShePyApi/)).
+The example notebooks in this folder are meant to help the user navigate what the inputs and outputs of a MIKE SHE model might look like and how they can validate their model with observation data.
 
-- **explore_input_data.ipynb** — *Description and plots of example input files*
+- **explore_input_data.ipynb** — *Exploring example input data files*
 - **view_mikeshe_results.ipynb** — *Description and plots of example output files from MIKE SHE simulation and water balance post-processing tool*
 - **model_validation.ipynb** — *Perform model validation of MIKE SHE outputs with river discharge and water table depth timeseries data*
-- **format_mshe.ipynb** — *Example code for running the mike she model from python and using customizable plugins*
 - **tools.py** — *Helper module containing useful functions for above notebooks*
+- **WellStats.py** — *Well statistics tool - used to estimate model performance at wells separated by well layer (depth levels below ground). Script provided by GEUS, see script header for more details.*
+- **WS_config.xml** — *Configuration file for running well statistics tool.*
 

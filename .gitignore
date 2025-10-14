@@ -1,44 +1,96 @@
 # Files
 update_requirements.sh
 mkdocs.yml
+code/format_mshe.ipynb
+code/format_WS_observations.ipynb
 
 # Folders
 .github/
 .input_old/
 .model_old/
+.papers/
 Skjern_Models/**
 MapsDK/
 MapsDK.zip
 code/.extra_books/
 code/simple_box/*
+.vscode/
+observations/MS/
+output_sample/
+model/
+input/
+.preprocessing/
+input/rivers_lakes_sewers/.old_files/*
+input/climate/.old_files/*
+input/land_use/.old_files/*
+observations/H_data/.old_files/*
+
+# Keep a few files for explore_input_data.ipynb
+!input/README.md
+!input/domain/Skjern.shp
+!input/topography/dkmj_topo_0.dfs2
+!input/climate/DK*
+!input/land_use/DK_Landuse_9classes_5cropsCorr_100m_MB500.dfs2
+!input/land_use/crop_map_irrigation_5class_500m.dfs2
+!input/land_use/Deficit_factor_5veg_inv.dfs0
+!input/land_use/DK_2018_Veg_Prop_inv_100m.etv
+!input/rivers_lakes_sewers/500m_Skjern.xns11
+# saturated and unsaturated folders
+!input/saturated/drainage/DrainDepth_dist_500mMB.dfs2
+!input/saturated/FOHM_table_translated.pdf
+!input/saturated/README.md
+!input/unsaturated/DK_soil_georeg_250m-50m.DFS2
+
+# Keep a few files for model_validation.ipynb
+!observations/Q_data/Q_filtered.dfs0
+!observations/H_data/H_data_filtered/*
+!observations/H_data/head_evel_SZ.csv
+# !output_sample/mshe_output/HIP_500m_Skjern_DHI_RiverLinks.shp
+# !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_M11.dfs0
+# !output_sample/mshe_output/HIP_500m_Skjern_DHIDetailedTS_SZ.dfs0
+
+## Keep files for view_mikeshe_results.ipynb
+# !output_sample/mshe_output/Skjern_500m_overland.dfs2
+# !output_sample/mshe_output/Skjern_500m_3DSZflow.dfs3
+# !output_sample/mshe_output/Skjern_500m_ET_UzCells.dfs2
+# !output_sample/mshe_output/Skjern_500m_overland.dfs2
+# !output_sample/mshe_output/Skjern_500m_2DSZ.dfs2
+# !output_sample/mshe_output/Skjern_500m_3DSZ.dfs3
+!output_sample/mshe_output/Skjern_500m_RiverLinks.shp
+!output_sample/mshe_output/Skjern_500mDetailedTS_M11.dfs0
+!output_sample/mshe_output/Skjern_500mDetailedTS_SZ.dfs0
+!output_sample/waterbalance_output/*
+
+# add model files
+# !model/500m_Skjern.mshe
 
 # But do not ignore these specific file types
-!Skjern_Models/**/*.she
-!Skjern_Models/**/*.mhydro
-!Skjern_Models/**/*.xns11
-!MapsDK/Hdata/Hdata_filtered/*.dfs0
-!code/simple_box/*Box.she
-!code/simple_box/*.dfs2
+# !Skjern_Models/**/*.she
+# !Skjern_Models/**/*.mhydro
+# !Skjern_Models/**/*.xns11
+# !MapsDK/Hdata/Hdata_filtered/*.dfs0
+# !code/simple_box/*Box.she
+# !code/simple_box/*.dfs2
 
 
 #!Skjern_Models/**/*.log
 
 # Specific files for explore_input_data.ipynb
-!MapsDK/DK_DMI_Corr_Precip_10km_1989-2022.dfs2
-!MapsDK/dkmj0219/dkmj_topo_0.dfs2
-!MapsDK/DKDomains2013/ID15_oplande_Skjern.shp
-!MapsDK/DK_DMI_Corr_Precip_10km_1989-2022.dfs2
-!MapsDK/DK_Ta_20km_1989-2022.dfs2
-!MapsDK/DK_ETref_0.95vest_for_storebaelt_20km_1989-2022.dfs2
-!MapsDK/DK_Landuse_9kl_5cropsCorr_100m_MB500.dfs2
-!MapsDK/crop_map_irrigation_5class_500m.dfs2
-!Skjern_Models/Setup/Deficit_factor_5veg_inv.dfs0
-!Skjern_Models/Setup/DK_2018_Veg_Prop_inv_100m.etv
-!Skjern_Models/Setup/500m_Skjern.xns11
+# !MapsDK/DK_DMI_Corr_Precip_10km_1989-2022.dfs2
+# !MapsDK/dkmj0219/dkmj_topo_0.dfs2
+# !MapsDK/DKDomains2013/ID15_oplande_Skjern.shp
+# !MapsDK/DK_DMI_Corr_Precip_10km_1989-2022.dfs2
+# !MapsDK/DK_Ta_20km_1989-2022.dfs2
+# !MapsDK/DK_ETref_0.95vest_for_storebaelt_20km_1989-2022.dfs2
+# !MapsDK/DK_Landuse_9kl_5cropsCorr_100m_MB500.dfs2
+# !MapsDK/crop_map_irrigation_5class_500m.dfs2
+# !Skjern_Models/Setup/Deficit_factor_5veg_inv.dfs0
+# !Skjern_Models/Setup/DK_2018_Veg_Prop_inv_100m.etv
+# !Skjern_Models/Setup/500m_Skjern.xns11
 
 # For model_validation.ipynb
-!MapsDK/Qdata/Q_filtered.dfs0
-!MapsDK/Hdata/head_evel_SZ.csv
+# !MapsDK/Qdata/Q_filtered.dfs0
+# !MapsDK/Hdata/head_evel_SZ.csv
 
 # PyCharm
 .idea/
