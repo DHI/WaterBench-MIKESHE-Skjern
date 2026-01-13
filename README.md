@@ -151,3 +151,7 @@ With conda:
 conda env create -f requirements.yml
 conda activate waterbench_skjern
 ```
+
+## Funding
+
+This work for compiling this dataset was funded via Novo Nordisk Foundation (NNF) Grant Number NNF23OC0081089, as part of the Global Wetland Center.
