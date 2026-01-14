@@ -3,7 +3,7 @@ name: Render Markdown to PDF using Quarto
 on:
   push:
     branches:
-      - main
+      - publish
     paths:
       - README.md  # Only trigger the workflow when README.md changes
   workflow_dispatch:  # Allow manual trigger
