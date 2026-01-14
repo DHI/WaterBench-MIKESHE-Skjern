@@ -50,6 +50,11 @@ observations/H_data/.old_files/*
 !output_sample/mshe_output/Skjern_500mDetailedTS_SZ.dfs0
 !output_sample/waterbalance_output/*
 
+# Zip files
+.publish/WaterBench-MIKESHE-Skjern.zip
+.publish/WaterBench-MIKESHE-Skjern-output.zip
+
+
 # PyCharm
 .idea/
 
