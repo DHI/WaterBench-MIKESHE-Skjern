@@ -1,24 +1,17 @@
 # Files
 update_requirements.sh
 mkdocs.yml
-code/format_mshe.ipynb
 code/format_WS_observations.ipynb
 
 # Folders
-.input_old/
-.model_old/
 .papers/
-Skjern_Models/**
-MapsDK/
-MapsDK.zip
-code/.extra_books/
-code/simple_box/*
+.preprocessing/
 .vscode/
+code/.extra_books/
 observations/MS/
 output_sample/
 model/
 input/
-.preprocessing/
 input/rivers_lakes_sewers/.old_files/*
 input/climate/.old_files/*
 input/land_use/.old_files/*
@@ -34,7 +27,8 @@ observations/H_data/.old_files/*
 !input/land_use/Deficit_factor_5veg_inv.dfs0
 !input/land_use/DK_2018_Veg_Prop_inv_100m.etv
 !input/rivers_lakes_sewers/500m_Skjern.xns11
-# saturated and unsaturated folders
+
+# Keep a few files for view_mikeshe_results.ipynb saturated and unsaturated folders
 !input/saturated/drainage/DrainDepth_dist_500mMB.dfs2
 !input/saturated/FOHM_table_translated.pdf
 !input/saturated/README.md
