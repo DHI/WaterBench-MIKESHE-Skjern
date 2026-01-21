@@ -15,13 +15,14 @@ Files:
 
 
 ## DOI
+https://doi.org/10.5281/zenodo.18323823
 
 ## Contributors
 * Sarah E. Franze
-* Henrik Andersson
 * Jesper Sandvig Mariegaard
-
-## Publication date
+* Henrik Andersson
+* Simon Stisen
+* Raphael Schneider
 
 
 ## Funding

@@ -9,6 +9,7 @@ zip_fn = ".publish/WaterBench-MIKESHE-Skjern.zip"
 def zip_repo():
     with zipfile.ZipFile(zip_fn, "w") as z:
         for fn in glob.glob("**/*", recursive=True):
+            print(f"Processing: {fn}")
             if (
                 not any([fn.startswith(x) for x in [".", "__", "output_sample\\"]])
                 and "__" not in fn

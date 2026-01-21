@@ -7,7 +7,7 @@
 
 This README provides practical and background information on the dataset. The dataset can be cited as:
 
-> DHI, GEUS (2026). Integrated Hydrological Model of Skjern Å catchment: MIKE SHE model setup, inputs, outputs and observation data. (1.0) [Data set]. Zenodo. DOI TBD
+> DHI, GEUS (2026). Integrated Hydrological Model of Skjern Å catchment: MIKE SHE model setup, inputs, outputs and observation data. (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.18323823
 
 See the [license](license.txt) for details on data usage.
 
@@ -66,7 +66,7 @@ This dataset is designed to support educational, research, and exploratory activ
 - license
 - requirements.yml
 
-> \* This repo does not contain all files needed for running the Skjern MIKE SHE model and notebooks due to large file size, particularly in the folders with * above. The example data and notebooks here are meant to help the user navigate input files, output files, and validation of the model. To run the model and notebooks, the complete folder of setup and input files should be downloaded from Zenodo.
+> \* This repo does not contain all files needed for running the Skjern MIKE SHE model and notebooks due to large file size, particularly in the folders with * above. The example data and notebooks here are meant to help the user navigate input files, output files, and validation of the model. To run the model and notebooks, the complete folder of setup and input files should be downloaded from Zenodo at https://doi.org/10.5281/zenodo.18323823.
 
 ## Introduction
 
