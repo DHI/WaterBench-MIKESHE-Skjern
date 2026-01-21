@@ -1,0 +1,15 @@
+name: waterbench_skjern
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - geopandas
+  - pandas
+  - numpy
+  - matplotlib
+  - ipykernel
+  - earthengine-api
+  - ca-certificates
+  - certifi
+  - openssl
+  - rasterio

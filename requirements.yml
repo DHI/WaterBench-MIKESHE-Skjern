@@ -1,4 +1,0 @@
-name: waterbench_skjern
-channels:
-  - conda-forge
-prefix: /home/safr/miniforge3/envs/waterbench_skjern
