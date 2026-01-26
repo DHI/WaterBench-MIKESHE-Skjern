@@ -123,12 +123,17 @@ The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at 
 In situ data for model validation include river gauges and water table depth wells. Available timeseries for the model simulation period are stored here as dfs0 files, in the folders MapsDK/Qdata/ and MapsDK/Hdata for river discharge and well timeseries, respectively. The location of the measurement stations are shown below:
 
 ![Alt text](figures/station_location.png)
+*Location of wells and river gauges within Skjern Å catchment.*
+
 
 An example comparison of modeled and observed timeseries for one of the river gauges in Skjern catchment is shown below, both as a direct timeseries comparison and a scatter plot of modeled vs. observed discharge. More plots like this can be generated for any of the river or well stations in the model validation notebook, found at ```code/model_validation.ipynb```.
 
 ![Alt text](figures/TS_val_Q250019.png)
+*Timeseries plot of modeled river discharge (blue) vs. observation data at a selected river gauge.*
+
 
 ![Alt text](figures/mod_vs_obs_Q250019.png)
+*Scatter plot of modeled river discharge vs. observation data at a selected rive gauge. A 1:1 line indicates a perfectly fitting model.*
 
 
 ## Data sources
@@ -147,8 +152,6 @@ The data used in this folder come from several sources.
 
 
 ## Dependencies
-
-To run the tutorials and fully explore this waterbench case, the following packages are required:
 
 The user can clone the required packages from the requirements.yaml or requirements.txt files.
 
