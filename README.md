@@ -1,5 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18323822.svg)](https://doi.org/10.5281/zenodo.18323822)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18376532.svg)](https://doi.org/10.5281/zenodo.18376532)
 
 # Integrated Hydrological Model of Skjern Å Catchment
 
